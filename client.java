@@ -1,5 +1,6 @@
 import java.net.*;
 import java.io.*;
+import java.util.Scanner;
 
 class client{
     
@@ -11,11 +12,14 @@ class client{
     
     
     public client(){
+        int port;
+        Scanner mysc = new Scanner(System.in);
+        System.out.println("enter port : ");
+        port = mysc.nextInt();
         try{
             System.out.println("WELCOME TO THAT-CORD");
             System.out.println("sending request to server...");
-            socket = new Socket("127.0.0.1",1243);
-            System.out.println("connection established !");
+            socket = new Socket("127.0.0.1",port);
 
 
             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));

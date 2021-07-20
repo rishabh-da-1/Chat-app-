@@ -1,5 +1,6 @@
 import java.net.*;
 import java.io.*;
+import java.util.Scanner;
 
 class server{
     //variables required -
@@ -10,13 +11,17 @@ class server{
     
     
     public server(){
+        int port;
+        Scanner mysc = new Scanner(System.in);
+        System.out.println("enter port : ");
+        port = mysc.nextInt();
+        
         try{
-            server = new ServerSocket(1243);
+            server = new ServerSocket(port);
             System.out.println("WELCOME TO THATCORD ! ");
             System.out.println("chat server established .." );
             System.out.println("now waiting for client request ...");
-            socket = server.accept();
-            System.out.println("now u can talk ");
+            socket = server.accept();;
             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream());
             
