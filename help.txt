@@ -1,0 +1,18 @@
+WElcome to that cord
+here is how to use this thing
+
+- both users need to be on the same network 
+- there can only be 1 server side 
+- run server.java on one pc 
+- run client.java on another 
+now u can talk to each other
+
+
+if there is any error realted to the port then just change the port from the source code of both files 
+the port must be same on both client.java and server.java.
+
+on client.java its on the 7th line last 4 digits port.
+on server.java its on the 14th line .
+
+
+thanks for using gui version comming soon .
